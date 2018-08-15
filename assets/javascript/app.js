@@ -1,7 +1,4 @@
-<<<<<<< Updated upstream
-var one = "helloWord"
-var one = "helloWord"
-=======
+
   // Initialize Firebase
   var config = {
     apiKey: "AIzaSyCZatYK5hPIJ2G5MuIvwKDh-yUWI3q_2vQ",
@@ -42,6 +39,7 @@ var one = "helloWord"
     database.ref().push(newCust);
     
     //clears boxes
+
     $("#firstname").val("");
     $("#lastname").val("");
     $("#city").val("");
@@ -53,5 +51,3 @@ var one = "helloWord"
 
   });
 
-
->>>>>>> Stashed changes
