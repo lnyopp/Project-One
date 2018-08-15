@@ -1,3 +1,4 @@
+
   // Initialize Firebase
   var config = {
     apiKey: "AIzaSyCZatYK5hPIJ2G5MuIvwKDh-yUWI3q_2vQ",
@@ -12,17 +13,17 @@
   var database = firebase.database();
 
 //button for adding
-  $(".btn btn-primary").on("click",function(event){
+  $(".btn.btn-primary").on("click",function(event){
     event.preventDefault();
 
 // grab user user input
-    var firstName = $("#validationDefault01").val().trim();
-    var lastName = $("#validationDefault02").val().trim();
-    var city = $("#validationDefault03").val().trim();
-    var state = $("#validationDefault04").val().trim();
-    var zipCode = $("#validationDefault05").val().trim();
-    var milesAway = $("#validationDefault06").val().trim();
-    var typeOfFood = $("#validationDefault07").val().trim();
+    var firstName = $("#firstname").val().trim();
+    var lastName = $("#lastname").val().trim();
+    var city = $("#city").val().trim();
+    var state = $("#state").val().trim();
+    var zipCode = $("#zipcode").val().trim();
+    var milesAway = $("#travelmiles").val().trim();
+    var typeOfFood = $("#foodtype").val().trim();
 
 //temporary object customer info
     var newCust = {
@@ -38,13 +39,15 @@
     database.ref().push(newCust);
     
     //clears boxes
-    $("#validationDefault01").val("");
-    $("#validationDefault02").val("");
-    $("#validationDefault03").val("");
-    $("#validationDefault04").val("");
-    $("#validationDefault05").val("");
-    $("#validationDefault06").val("");
-    $("#validationDefault07").val("");
+
+    $("#firstname").val("");
+    $("#lastname").val("");
+    $("#city").val("");
+    $("#state").val("");
+    $("#zipcode").val("");
+    $("#travelmiles").val("");
+    $("#foodtype").val("");
 
 
   });
+
