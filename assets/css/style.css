@@ -1,30 +1,70 @@
+/* Style the header */
+ .header {
+    display: flex;
+    padding: 10px 5px;
+    background-color:rgb(231, 89, 7);
+    color:  #f1f1f1;
+    justify-content: space-around;
+}
+.header p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.5rem;
+}
+.header h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.5rem;
+}
+
+/* Style the carousel */
 .carousel {
 height: 40 px;
 }
 
+/* Style the images */
 .img {
     max-width: 100%; 
     height: auto;
 }
 
-h1 {
-    font-size: 1.5rem;
+/* Style the form*/
+#city {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
 }
-footer {
+#state {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+}
+#zipcode {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+}
+#travelmiles {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+}
+#foodtype {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+}
+
+/* Style the submit button */
+.btn-primary {
+    flex: 1;
+    margin: 10;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+}
+
+/* Style the footer */
+.footer {
     display: flex;
     padding: 10px 5px;
-    background-color: #45a1ff;
-    color: #fff;
-}
-footer p {
-    flex: 1;
-    margin: 0;
-}
-footer ul {
-    flex: 1;
-    display: flex;
+    background-color:rgb(231, 89, 7);
+    color:  #f1f1f1;
     justify-content: space-around;
-    margin: 0;
-    padding-left: 0;
-    list-style: none;
+}
+.footer p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.5rem;
 }
