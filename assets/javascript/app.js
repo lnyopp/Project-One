@@ -17,34 +17,28 @@
     event.preventDefault();
 
 // grab user user input
-    var firstName = $("#firstname").val().trim();
-    var lastName = $("#lastname").val().trim();
     var city = $("#city").val().trim();
     var state = $("#state").val().trim();
-    var zipCode = $("#zipcode").val().trim();
+    var zipCode = $("#zipCode").val().trim();
     var milesAway = $("#travelmiles").val().trim();
     var typeOfFood = $("#foodtype").val().trim();
 
 //temporary object customer info
     var newCust = {
-        first: firstName,
-        last: lastName,
         c: city,
         s: state,
         zip: zipCode,
         mile: milesAway,
         food: typeOfFood,
     };
+    
 //pushes to database
     database.ref().push(newCust);
     
     //clears boxes
-
-    $("#firstname").val("");
-    $("#lastname").val("");
     $("#city").val("");
     $("#state").val("");
-    $("#zipcode").val("");
+    $("#zipCode").val("");
     $("#travelmiles").val("");
     $("#foodtype").val("");
 
