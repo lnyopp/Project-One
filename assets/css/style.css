@@ -1,4 +1,99 @@
+/* Style the header */
+ .header {
+    display: flex;
+    padding: 10px 5px;
+    background-color:rgb(231, 89, 7);
+    color:  #f1f1f1;
+    justify-content: space-around;
+    border-style: solid;
+ }
+
+.header p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.5rem;
+}
+.header h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.5rem;
+}
+
+/* Style the carousel */
 .carousel {
 height: 40 px;
+}
 
+/* Style the images */
+.img {
+    max-width: 100%; 
+    height: auto;
+}
+
+/* Style the form*/
+#city {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+}
+#state {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+}
+#zipcode {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+}
+#travelmiles {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+}
+#foodtype {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+}
+
+/* Style the submit button */
+.btn-primary {
+    flex: 1;
+    margin: 10;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+}
+
+/* Style the footer */
+.footer {
+    display: flex;
+    padding: 10px 5px;
+    background-color:rgb(231, 89, 7);
+    color:  #f1f1f1;
+    justify-content: space-around;
+}
+.footer p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.5rem;
+}
+
+/* Style the RESULTS LOADER on pg. 2 */
+.loader {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid blue;
+    border-bottom: 16px solid blue;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+  }
+  
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  .p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16 px;
 }
