@@ -37,7 +37,7 @@ height: 40 px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 12px;
 }
-#zipcode {
+#zipCode {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 12px;
 }
@@ -54,6 +54,8 @@ height: 40 px;
 .btn-primary {
     flex: 1;
     margin: 10;
+}
+.p {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 12px;
 }
