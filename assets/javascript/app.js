@@ -15,12 +15,10 @@ var database = firebase.database();
 $(".btn.btn-primary").on("click", function (event) {
     event.preventDefault();
 
-    // grab user user input
     var city = $("#city").val().trim();
     var state = $("#state").val().trim();
     var zipCode = $("#zipCode").val().trim();
     var milesAway = $("#travelMiles").val().trim();
-
 
     //temporary object customer info
     var newCust = {
@@ -86,7 +84,7 @@ function loadRestaurants(lat, lon) {
     queryURL += "&radius=" + metersAway;
     queryURL += "&lat=" + lat;
     queryURL += "&lon=" + lon;
-
+  
     $.ajax({
         url: queryURL,
         beforeSend: function (request) {
