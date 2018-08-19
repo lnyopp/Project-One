@@ -20,7 +20,7 @@ $(".btn.btn-primary").on("click", function (event) {
     var state = $("#state").val().trim();
     var zipCode = $("#zipCode").val().trim();
     var milesAway = $("#travelMiles").val().trim();
-   
+
 
     //temporary object customer info
     var newCust = {
@@ -32,12 +32,6 @@ $(".btn.btn-primary").on("click", function (event) {
 
     //pushes to database
     database.ref().push(newCust);
-
-    //clears boxes
-    /*$("#city").val("");
-    $("#state").val("");
-    $("#zipCode").val("");
-    $("#travelMiles").val("");*/
 });
 
 function getCuisines() {
@@ -64,15 +58,11 @@ function getCuisines() {
 }
 
 function displayRestaurantInfo() {
-
-    //fetch lat lon
-    //http://open.mapquestapi.com/geocoding/v1/address?key=UISeCHVAVPQkB674cMljIU6v7cVnoNqj&location=Charlotte,NC%2028104
     var city = $("#city").val().trim();
     var state = $("#state").val().trim();
     var zipCode = $("#zipCode").val().trim();
-
     var geoUrl = "http://open.mapquestapi.com/geocoding/v1/address?key=UISeCHVAVPQkB674cMljIU6v7cVnoNqj&location=";
-    geoUrl += city+","+state+"%20"+zipCode;
+    geoUrl += city + "," + state + "%20" + zipCode;
     $.ajax({
         url: geoUrl,
         type: 'GET'
@@ -81,17 +71,15 @@ function displayRestaurantInfo() {
         var latLon = res.results[0].locations[0].latLng;
         console.log(latLon);
         loadRestaurants(latLon.lat, latLon.lng);
-    });    
+    });
 }
-
-
 $("#submit").on("click", function (event) {
     event.preventDefault();
     displayRestaurantInfo();
 
 });
 
-function loadRestaurants(lat, lon){
+function loadRestaurants(lat, lon) {
     var queryURL = "https://developers.zomato.com/api/v2.1/search?cuisines=" + $("#cuisines").val();
     var milesAway = $("#travelMiles").val().trim();
     var metersAway = milesAway * 1609.34;
@@ -107,34 +95,15 @@ function loadRestaurants(lat, lon){
         type: 'GET'
     }).then(function (res) {
         console.log(res);
-
-        
-
+        $("tr").remove();
         var tbl_body = "";
         var odd_even = false;
-        $.each(res.restaurants, function(i, item) {
+        $.each(res.restaurants, function (i, item) {
             $('<tr>').html(
-                "<td>" + item.restaurant.name + "</td><td><a target=\"_blank\" href=\""+item.restaurant.url+"\"><img class=\"thumb\" src=" + item.restaurant.thumb + "/></a></td><td>" + item.restaurant.user_rating.aggregate_rating + "</td>").appendTo('#restaurantTable');           
-        })      
+                "<td>" + item.restaurant.name + "</td><td><a target=\"_blank\" href=\"" + item.restaurant.url + "\"><img class=\"thumb\" src=" + item.restaurant.thumb + "/></a></td><td>" + item.restaurant.user_rating.aggregate_rating + "</td>").appendTo('#restaurantTable');
+        })
     });
 }
 
 
 getCuisines();
-
-
-// }).then(function (res) {
-//     console.log(res);
-// });
-
-
-//L.mapquest.key = 'KEY';
-
-// 'map' refers to a <div> element with the ID map
-//L.mapquest.map('map', {
-//center: [37.7749, -122.4194],
-//layers: L.mapquest.tileLayer('map'),
-//zoom: 12
-//});
-
-
