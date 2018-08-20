@@ -30,25 +30,11 @@ body {
 
 /* Style the carousel */
 
-#carouselExampleSlides {
-    height: 100%;
-    width: 100%;
-}
+/* Style the input form*/
 
-/* Style the images */
-
-.img {
-    width: 100%;
-    min-width: 100;
-    height: 100%;
-}
-
-
-
-/* Style and center the input form*/
-.form-inline {
-    content: justify-content-center
-} 
+form .class {
+    text-align: center;
+  }
 
 #city {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -80,8 +66,7 @@ body {
 #submit {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 12px;
-    flex: 1;
-    margin: 10;
+    margin: 25;
 }
 
 .thumb {
@@ -91,11 +76,13 @@ body {
 
 /* Style the restaurant results table*/
 
-#form {
+#restaurantTable {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 18px;
+    font-size: 24px;
+    text-align: justify;
+    color: #f2f2f2;
+    padding: 15px;
 }
-
 
 /* Style the footer */
 
@@ -111,10 +98,17 @@ body {
 }
 
 
-/* On screens that are 600px wide or less, make the restaurant results links stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
+/* MEDIA QUERY:
+On screens that are 768px wide or less, make the restaurant results links stack on top of each other instead of next to each other */
+
+@media screen and (max-width: 768px) {
+    #carouselExampleSlides {
+        float: none;
+        width: 100%;
+}
+
+@media screen and (max-width: 768px) {
     #restaurantTable {
         float: none;
         width: 100%;
 }}
-)
