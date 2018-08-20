@@ -1,3 +1,12 @@
+
+$(document).ready(function(){
+var audio = new audio("assets/videoplayback(1).m3");
+audio.play();
+
+document.getElementById('src','videoplayback(1).mp3')
+play();
+});
+
 // Initialize Firebase
 var config = {
     apiKey: "AIzaSyCZatYK5hPIJ2G5MuIvwKDh-yUWI3q_2vQ",
