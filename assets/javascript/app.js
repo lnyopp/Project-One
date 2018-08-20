@@ -93,11 +93,11 @@ function loadRestaurants(lat, lon) {
         type: 'GET'
     }).then(function (res) {
         console.log(res);
-        $("tr").remove();
+       $("tbody").empty();
         var tbl_body = "";
         var odd_even = false;
         $.each(res.restaurants, function (i, item) {
-            $('<tr>').html(
+            $('<tbody>').html(
                 "<td>" + item.restaurant.name + "</td><td><a target=\"_blank\" href=\"" + item.restaurant.url + "\"><img class=\"thumb\" src=" + item.restaurant.thumb + "/></a></td><td>" + item.restaurant.user_rating.aggregate_rating + "</td>").appendTo('#restaurantTable');
         })
     });
