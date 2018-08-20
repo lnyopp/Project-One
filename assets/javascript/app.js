@@ -1,6 +1,6 @@
 
 $(document).ready(function(){
-var audio = new audio("assets/videoplayback(1).m3");
+var audio = new Audio("assets/videoplayback(1).mp3");
 audio.play();
 
 document.getElementById('src','videoplayback(1).mp3')
