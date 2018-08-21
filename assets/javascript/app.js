@@ -95,7 +95,7 @@ function loadRestaurants(lat, lon) {
         type: 'GET'
     }).then(function (res) {
         console.log(res);
-        $("tr").remove();
+        $("tbody").remove();
         var tbl_body = "";
         var odd_even = false;
         $.each(res.restaurants, function (i, item) {
