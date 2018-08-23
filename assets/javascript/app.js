@@ -1,4 +1,4 @@
-// Initialize Firebase
+/// Initialize Firebase
 var config = {
     apiKey: "AIzaSyCZatYK5hPIJ2G5MuIvwKDh-yUWI3q_2vQ",
     authDomain: "foodforthought-1f199.firebaseapp.com",
@@ -15,10 +15,12 @@ var database = firebase.database();
 $(".btn.btn-primary").on("click", function (event) {
     event.preventDefault();
 
+    // grab user user input
     var city = $("#city").val().trim();
     var state = $("#state").val().trim();
     var zipCode = $("#zipCode").val().trim();
     var milesAway = $("#travelMiles").val().trim();
+
 
     //temporary object customer info
     var newCust = {
@@ -84,7 +86,7 @@ function loadRestaurants(lat, lon) {
     queryURL += "&radius=" + metersAway;
     queryURL += "&lat=" + lat;
     queryURL += "&lon=" + lon;
-  
+
     $.ajax({
         url: queryURL,
         beforeSend: function (request) {
@@ -93,11 +95,11 @@ function loadRestaurants(lat, lon) {
         type: 'GET'
     }).then(function (res) {
         console.log(res);
-       $("tbody").empty();
+        $("tbody").empty();
         var tbl_body = "";
         var odd_even = false;
         $.each(res.restaurants, function (i, item) {
-            $('<tbody>').html(
+            $('<tr>').html(
                 "<td>" + item.restaurant.name + "</td><td><a target=\"_blank\" href=\"" + item.restaurant.url + "\"><img class=\"thumb\" src=" + item.restaurant.thumb + "/></a></td><td>" + item.restaurant.user_rating.aggregate_rating + "</td>").appendTo('#restaurantTable');
         })
     });
