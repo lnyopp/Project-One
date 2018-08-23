@@ -1,104 +1,114 @@
-/* Style the header */
- .header {
+/* Style the site background */
+
+body {
+    background-color: rgb(91, 182, 194);
+    height: 100%;
+    width: 100%
+}
+
+
+/* Style the header & title */
+
+#myHeader {
     display: flex;
-    padding: 10px 5px;
-    background-color:rgb(231, 89, 7);
-    color:  #f1f1f1;
+    padding: 25px;
+    background-color: rgb(233, 106, 33);
+    color: black;
     justify-content: space-around;
     border-style: solid;
- }
+    font-family: fantasy
+}
 
-.header p {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1.5rem;
+.ex1 {
+    font-size: 52px;
 }
-.header h1 {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1.5rem;
+.ex2 {
+    font-size: 36px;
+    font-style: italic
 }
+.ex3
 
 /* Style the carousel */
-.carousel-item {
-    background-size: cover;
-    background-position: center center;
-}
 
-/* Style the images */
-.img {
-    max-width: 100%; 
-    height: auto;
-}
+/* Style the input form*/
 
-/* Style the form*/
+form .class {
+    text-align: center;
+  }
+
 #city {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 12px;
 }
+
 #state {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 12px;
 }
-#zipcode {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 12px;
-}
-#travelmiles {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 12px;
-}
-#foodtype {
+
+#zip {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 12px;
 }
 
-/* Style the submit button */
-.btn-primary {
-    flex: 1;
-    margin: 10;
+#travelMiles {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 12px;
 }
 
-/* Style the footer */
-.footer {
-    display: flex;
-    padding: 10px 5px;
-    background-color:rgb(231, 89, 7);
-    color:  #f1f1f1;
-    justify-content: space-around;
-}
-.footer p {
+#cuisines {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1.5rem;
+    font-size: 12px;
 }
 
-/* Style the RESULTS LOADER on pg. 2 */
-.loader {
-    border: 16px solid #f3f3f3;
-    border-radius: 50%;
-    border-top: 16px solid blue;
-    border-bottom: 16px solid blue;
-    width: 120px;
-    height: 120px;
-    -webkit-animation: spin 2s linear infinite;
-    animation: spin 2s linear infinite;
-  }
-  
-  @-webkit-keyframes spin {
-    0% { -webkit-transform: rotate(0deg); }
-    100% { -webkit-transform: rotate(360deg); }
-  }
-  
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
+/* Style the submit button*/
 
-  .p {
+#submit {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 16 px;
+    font-size: 12px;
+    margin: 25;
 }
-.thumb{
+
+.thumb {
     height: 200px;
     width: 200px;
 }
+
+/* Style the restaurant results table*/
+
+#restaurantTable {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 24px;
+    text-align: justify;
+    color: #f2f2f2;
+    padding: 15px;
+}
+
+/* Style the footer */
+
+#myFooter {
+    display: flex;
+    padding: 15px;
+    background-color: rgb(233, 106,33);
+    color: black;
+    justify-content: space-around;
+    border-style: solid;
+    font-family: fantasy;
+    font-size: 24px;
+}
+
+
+/* MEDIA QUERY:
+On screens that are 768px wide or less, make the restaurant results links stack on top of each other instead of next to each other */
+
+@media screen and (max-width: 768px) {
+    #carouselExampleSlides {
+        float: none;
+        width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    #restaurantTable {
+        float: none;
+        width: 100%;
+}}

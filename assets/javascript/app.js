@@ -1,4 +1,4 @@
-// Initialize Firebase
+/// Initialize Firebase
 var config = {
     apiKey: "AIzaSyCZatYK5hPIJ2G5MuIvwKDh-yUWI3q_2vQ",
     authDomain: "foodforthought-1f199.firebaseapp.com",
@@ -95,7 +95,7 @@ function loadRestaurants(lat, lon) {
         type: 'GET'
     }).then(function (res) {
         console.log(res);
-        $("tbody").remove();
+        $("tbody").empty();
         var tbl_body = "";
         var odd_even = false;
         $.each(res.restaurants, function (i, item) {
