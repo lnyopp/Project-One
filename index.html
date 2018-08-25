@@ -5,6 +5,7 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/reset.css">
   <link rel="stylesheet" href="assets/css/style.css">
@@ -16,115 +17,88 @@
 
 <body>
   <div class="header" id="myHeader">
-    <div class="col-md-6">
-      <p class="ex1">Food for Thought</p>
-    </div>
-    <div class="col-md-6">
-      <p class="ex2">You Crave It, We'll Find It!</p>
-
-      <p class="ex3">Just complete the info below and click "submit." Top options for the food you want now will appear.</p>
+    <div class="col-md-3">
+      <h1>Food for Thought</h1>
+      <p>You Crave It, We'll Find It</p>
     </div>
   </div>
 
   <div id="carouselExampleSlides" class="carousel slide" data-ride="carousel">
     <div class="carousel">
       <div class="carousel-item active">
-        <img class="d-block w-100" src="assets/images/display.jpg" height="400px" class="img-fluid" alt="Responsive image of inviting food">
+        <img class="d-block mx-auto" src="assets/images/display.jpg" height="300px" class="img-fluid" alt="Responsive image">
       </div>
       <div class="carousel-item">
-        <img class="d-block w-100" src="assets/images/spaghetti.jpg" height="400px" class="img-fluid" alt="Responsive image of inviting food">
+        <img class="d-block mx-auto" src="assets/images/spaghetti.jpg" height="300px" class="img-fluid" alt="Responsive image">
       </div>
       <div class="carousel-item">
-        <img class="d-block w-100" src="assets/images/perfectplate.jpg" height="400px" class="img-fluid" alt="Responsive image of inviting food">
-      </div>
-      <div class="carousel-item">
-        <img class="d-block w-100" src="assets/images/hamburger.jpg" height="400px" class="img-fluid" alt="Responsive image of inviting food">
-      </div>
-      <div class="carousel-item">
-        <img class="d-block w-100" src="assets/images/asianwok.jpg" height="400px" class="img-fluid" alt="Responsive image of inviting food">
-      </div>
-      <div class="carousel-item">
-        <img class="d-block w-100" src="assets/images/ice-cream-cone.jpg" height="400px" class="img-fluid" alt="Responsive image of inviting food">
+        <img class="d-block mx-auto" src="assets/images/perfectplate.jpg" height="300px" class="img-fluid" alt="Responsive image">
       </div>
     </div>
   </div>
 
   <form>
-    <div class="form-group centered">
-      <form action="" class="form-inline justify-content-center">
-        <div class="text align center">
-          <div class="col-md-3 mb-3">  
-
-            <label for="validationDefault01">City</label>
-            <input type="text" class="form-control" id="city" placeholder="City" required>
-          </div>
-
-          <div class="col-md-3 mb-3">
-
-            <label for="validationDefault02">State</label>
-            <input type="text" class="form-control" id="state" placeholder="State" required>
-          </div>
-
-          <div class="col-md-3 mb-3">
-
-            <label for="validationDefault03">Zip</label>
-            <input type="text" class="form-control" id="zip" placeholder="Zip" required>
-          </div>
-
-          <div class="col-md-3 mb-3">
-
-            <label for="validationDefault04">Travel Miles</label>
-            <input type="text" class="form-control" id="travelMiles" placeholder="How many miles away" required>
-          </div>
-
-          <div class="col-md-3 mb-3">
-
-
-            <label for="cuisines">Type Of Food</label>
-            <select id="cuisines" class="form-control">
-            </select>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <button id="submit" class="btn btn-primary" type="submit">Submit Form</button>
-
-          <table id="restaurantTable" class="table table-hover">
-            <thead>
-              <tr>
-                <th scope="col">Restaurant Name</th>
-                <th scope="col">Photo</th>
-                <th scope="col">Rating</th>
-              </tr>
-            </thead>
-        </div>
-        </table>
-      </form>
-      <br>
-      <br>
-
-      <br>
-      <br>
-      <!-- INCLUDED a href instruction here and above, to tell page to scroll back to top (esp. for a mobile device-->
-      <a href='#top'></a>
-
-      <div class="footer" id="myFooter">
-        <div class="col-md-3">
-          <p>Food for Thought</p>
-          Powered by Team Tesla ©2018</p>
-        </div>
+    <div class="form-group align-items-center">
+      <div class="col-md-3 mb-3">
+        <label for="validationDefault01">City</label>
+        <input type="text" class="form-control" id="city" placeholder="City" required>
       </div>
+      <div class="col-md-3 mb-3">
+        <label for="validationDefault02">State</label>
+        <input type="text" class="form-control" id="state" placeholder="State" required>
+      </div>
+      <div class="col-md-3 mb-3">
+        <label for="validationDefault03">Zip</label>
+        <input type="text" class="form-control" id="zipCode" placeholder="Zip" required>
+      </div>
+      <div class="col-md-3 mb-3">
+        <label for="validationDefault04">Travel Miles</label>
+        <input type="text" class="form-control" id="travelMiles" placeholder="How many miles away" required>
+      </div>
+      <div class="col-md-3 mb-3">
+        <label for="cuisines">Type Of Food</label>
+        <select id="cuisines" class="form-control">
+        </select>
+      </div>
+    </div>
 
-      <!-- Optional JavaScript -->
-      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-      <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin="anonymous"></script>
-      <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
-      <script src="./assets/javascript/app.js"></script>
+    <div class="form-group">
+      <button id="submit" class="btn btn-primary" type="submit">Submit Form</button>
+
+      <table id="restaurantTable" class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Restaurant Name</th>
+            <th scope="col">Photo</th>
+            <th scope="col">Rating</th>
+          </tr>
+        </thead>
+      </table>
+  </form>
+  <br>
+  <br>
+  <!-- INCLUDED a href instruction here an
+  <br>
+  <br>
+  <!-- INCLUDED a href instruction here and above, to tell page to scroll back to top (esp. for a mobile device-->
+  <a href='#top'></a>
+
+  <div class="footer" id="myFooter">
+    <div class="col-md-3">
+      <p>Food for Thought ©2018 Powered by Team Tesla</p>
+    </div>
+  </div>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+  <script src="./assets/javascript/app.js"></script>
 
 </body>
 
